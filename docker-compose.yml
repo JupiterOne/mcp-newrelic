@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  newrelic-mcp:
+    build: .
+    container_name: newrelic-mcp-server
+    environment:
+      - NEW_RELIC_API_KEY=${NEW_RELIC_API_KEY}
+      - NEW_RELIC_ACCOUNT_ID=${NEW_RELIC_ACCOUNT_ID}
+      - NEW_RELIC_REGION=${NEW_RELIC_REGION:-US}
+    volumes:
+      - ./logs:/app/logs
+      - ./config:/app/config
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    networks:
+      - mcp-network
+    # Examples of different startup methods:
+    # Environment variables (default)
+    # command: ["uv", "run", "python", "server.py"]
+    
+    # Command line arguments
+    # command: ["uv", "run", "python", "server.py", "--api-key", "${NEW_RELIC_API_KEY}", "--account-id", "${NEW_RELIC_ACCOUNT_ID}"]
+    
+    # Config file
+    # command: ["uv", "run", "python", "server.py", "--config", "/app/config/newrelic-config.json"]
+
+networks:
+  mcp-network:
+    driver: bridge
