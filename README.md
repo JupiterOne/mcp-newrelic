@@ -2,7 +2,7 @@
 
 A comprehensive Model Context Protocol (MCP) server for New Relic monitoring, observability, and management operations.
 
-## 🚀 Features
+## Features
 
 ### Core Monitoring & Observability
 - **NRQL Query Execution**: Run custom New Relic Query Language queries
@@ -98,7 +98,7 @@ export NEW_RELIC_RETRY_ATTEMPTS="3"
 2. **Account ID**: Found in your New Relic URL: `https://one.newrelic.com/accounts/{ACCOUNT_ID}/...`
 3. **Region**: Use "EU" if your account is on `one.eu.newrelic.com`, otherwise "US"
 
-## 🔧 Usage
+## Usage
 
 ### Start the Server
 ```bash
@@ -225,7 +225,7 @@ The Docker image uses:
 - **Volume mounts** for configuration and logs
 - **Health checks** for container monitoring
 
-## 👨‍💻 Development
+## Development
 
 ### Development Setup
 ```bash
@@ -261,7 +261,7 @@ NEW_RELIC_API_KEY=your-key NEW_RELIC_ACCOUNT_ID=your-id uv run python test_serve
 
 For detailed development information, see [**DEVELOPMENT.md**](DEVELOPMENT.md).
 
-## 🔗 Example Usage
+## Example Usage
 
 ### Complete Alert Setup Workflow
 ```python
