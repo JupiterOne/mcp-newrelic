@@ -19,6 +19,7 @@ build-backend = "hatchling.build"
 
 
 [tool.uv]
+required-version = ">=0.6.15"
 dev-dependencies = [
     "mypy>=1.16.1",
     "pre-commit>=4.2.0",
